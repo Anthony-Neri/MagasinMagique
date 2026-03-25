@@ -31,39 +31,56 @@ class MagasinTest {
         }
     }
 
-        @Test
-        void checkUpdateQualityPass() {
-            Item[] items = new Item[] { new Item("Pass VIP Concert", 15, 20) };
-            Item[] itemsV2 = new Item[] { new Item("Pass VIP Concert", 15, 20) };
+    @Test
+    void checkUpdateQualityPass() {
+        Item[] items = new Item[]{new Item("Pass VIP Concert", 15, 20)};
+        Item[] itemsV2 = new Item[]{new Item("Pass VIP Concert", 15, 20)};
 
-            Magasin app = new Magasin(items);
-            MagasinV2 appV2 = new MagasinV2(itemsV2);
-            for (int i = 0 ; i < 50 ; i++) {
+        Magasin app = new Magasin(items);
+        MagasinV2 appV2 = new MagasinV2(itemsV2);
+        for (int i = 0; i < 50; i++) {
 
-                app.updateQuality();
-                appV2.updateQuality();
+            app.updateQuality();
+            appV2.updateQuality();
 
-                assertEquals(app.items[0].quality,appV2.items[0].quality);
-                assertEquals(app.items[0].sellIn,appV2.items[0].sellIn);
-            }
+            assertEquals(app.items[0].quality, appV2.items[0].quality);
+            assertEquals(app.items[0].sellIn, appV2.items[0].sellIn);
         }
+    }
 
-        @Test
-        void checkUpdateQualityKryptonite() {
-            Item[] items = new Item[] { new Item("Kryptonite", 15, 80) };
-            Item[] itemsV2 = new Item[] { new Item("Kryptonite", 15, 80) };
+    @Test
+    void checkUpdateQualityKryptonite() {
+        Item[] items = new Item[]{new Item("Kryptonite", 15, 80)};
+        Item[] itemsV2 = new Item[]{new Item("Kryptonite", 15, 80)};
 
-            Magasin app = new Magasin(items);
-            MagasinV2 appV2 = new MagasinV2(itemsV2);
+        Magasin app = new Magasin(items);
+        MagasinV2 appV2 = new MagasinV2(itemsV2);
 
-            for(int i = 0; i < 50; i++) {
-                app.updateQuality();
-                appV2.updateQuality();
+        for (int i = 0; i < 50; i++) {
+            app.updateQuality();
+            appV2.updateQuality();
 
-                assertEquals(app.items[0].quality, appV2.items[0].quality);
-                assertEquals(app.items[0].sellIn, appV2.items[0].sellIn);
-            }
+            assertEquals(app.items[0].quality, appV2.items[0].quality);
+            assertEquals(app.items[0].sellIn, appV2.items[0].sellIn);
         }
+    }
+
+    @Test
+    void checkUpdateQualityLambda() {
+        Item[] items = new Item[]{new Item("Lambda", 15, 80)};
+        Item[] itemsV2 = new Item[]{new Item("Lambda", 15, 80)};
+
+        Magasin app = new Magasin(items);
+        MagasinV2 appV2 = new MagasinV2(itemsV2);
+
+        for (int i = 0; i < 50; i++) {
+            app.updateQuality();
+            appV2.updateQuality();
+
+            assertEquals(app.items[0].quality, appV2.items[0].quality);
+            assertEquals(app.items[0].sellIn, appV2.items[0].sellIn);
+        }
+    }
 }
 
 
