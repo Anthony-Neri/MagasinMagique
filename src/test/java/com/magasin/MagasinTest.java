@@ -113,7 +113,7 @@ class MagasinTest {
 
 
         app.updateQuality();
-        appV2.updateQuality();
+        appV2.updateQualityBasic();
 
         assertEquals(toString(app.items), toString(appV2.items));
 

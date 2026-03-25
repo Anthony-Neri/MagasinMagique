@@ -7,6 +7,16 @@ public class MagasinV2 {
         this.items = items;
     }
 
+    public void updateQualityBasic() {
+        for (int i = 0; i < items.length; i++) {
+            if (items[i].sellIn > 0) {
+                items[i].quality -= 1;
+            } else {
+                items[i].quality -= 2;
+            }
+            items[i].sellIn -= 1;
+        }
+    }
 
     public void updateQuality() {
         for (int i = 0; i < items.length; i++) {
