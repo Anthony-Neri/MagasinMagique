@@ -132,6 +132,22 @@ class MagasinTest {
         }
         return s.toString();
     }
+
+    @Test
+    void checkUpdateQualityMagicPower () {
+        Item[] items = new Item[]{
+                new Item("Pouvoirs magiques", 10,10),
+        };
+        MagasinV2 appV2 = new MagasinV2(items);
+        appV2.updateQuality();
+
+        for (Item item : items) {
+            assertEquals(9, item.sellIn);
+            assertEquals(8, item.quality);
+        }
+    }
+
 }
+
 
 

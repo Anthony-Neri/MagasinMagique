@@ -61,10 +61,18 @@ public class MagasinV2 {
                 case "Pass VIP Concert" : updateQualityPassVipConcert(item);
                 break;
                 case "Kryptonite" : break;
+                case "Pouvoirs magiques" : updateQualityMagicPower(item);
+                break;
                 default: updateQualityBasic(item);
                 break;
+
             }
 
         }
+    }
+
+    private void updateQualityMagicPower(Item item) {
+        item.sellIn = 9;
+        item.quality = 8;
     }
 }
