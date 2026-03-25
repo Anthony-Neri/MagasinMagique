@@ -65,7 +65,7 @@ class MagasinTest {
 
 
         app.updateQuality();
-        appV2.updateQuality();
+        appV2.updateQualityPassVipConcert();
 
         assertEquals(toString(app.items), toString(appV2.items));
 
