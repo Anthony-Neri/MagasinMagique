@@ -103,14 +103,18 @@ class MagasinTest {
         Item[] items = new Item[]{
                 new Item("Lambda", 15, 50),
                 new Item("Lambda", 1, 50),
-                new Item("Lambda", -1, 4)
+                new Item("Lambda", -1, 4),
+                new Item("Lambda", -1, 0)
+
 
 
         };
         Item[] itemsV2 = new Item[]{
                 new Item("Lambda", 15, 50),
                 new Item("Lambda", 1, 50),
-                new Item("Lambda", -1, 4)
+                new Item("Lambda", -1, 4),
+                new Item("Lambda", -1, 0)
+
         };
 
         Magasin app = new Magasin(items);
@@ -137,14 +141,22 @@ class MagasinTest {
     void checkUpdateQualityMagicPower () {
         Item[] items = new Item[]{
                 new Item("Pouvoirs magiques", 10,10),
+                new Item("Pouvoirs magiques", 8,8),
+                new Item("Pouvoirs magiques", 0,8),
+                new Item("Pouvoirs magiques", 0,3)
         };
         MagasinV2 appV2 = new MagasinV2(items);
         appV2.updateQuality();
 
-        for (Item item : items) {
-            assertEquals(9, item.sellIn);
-            assertEquals(8, item.quality);
-        }
+
+        assertEquals(9, items[0].sellIn);
+        assertEquals(8, items[0].quality);
+        assertEquals(7, items[1].sellIn);
+        assertEquals(6, items[1].quality);
+        assertEquals(-1, items[2].sellIn);
+        assertEquals(4, items[2].quality);
+        assertEquals(-1, items[3].sellIn);
+        assertEquals(0, items[3].quality);
     }
 
 }
