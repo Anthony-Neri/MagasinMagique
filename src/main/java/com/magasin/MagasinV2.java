@@ -36,7 +36,7 @@ public class MagasinV2 {
     public void updateQualityPassVipConcert(Item item) {
 
         if (item.sellIn > 10) {
-            item.quality += 5;
+            item.quality += 1;
         } else if (item.sellIn > 5) {
             item.quality += 2;
         } else if (item.sellIn > 0) {
