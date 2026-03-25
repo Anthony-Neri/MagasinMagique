@@ -18,6 +18,21 @@ public class MagasinV2 {
         }
     }
 
+    public void updateQualityComte() {
+        for (Item item : items) {
+            if (item.sellIn > 0) {
+                item.quality += 1;
+            } else {
+                item.quality += 2;
+            }
+            item.sellIn -= 1;
+
+            if (item.quality > 50) {
+                item.quality = 50;
+            }
+        }
+    }
+
     public void updateQuality() {
         for (int i = 0; i < items.length; i++) {
             if (!items[i].name.equals("Comté")

@@ -20,6 +20,7 @@ class MagasinTest {
                 new Item("Comté", 10, 50),
                 new Item("Comté", 0, 10),
                 new Item("Comté", -1, 50),
+                new Item("Comté", 10, 40)
         };
 
         Item[] itemsV2 = new Item[]{
@@ -27,6 +28,7 @@ class MagasinTest {
                 new Item("Comté", 10, 50),
                 new Item("Comté", 0, 10),
                 new Item("Comté", -1, 50),
+                new Item("Comté", 10, 40)
         };
 
 
@@ -35,7 +37,7 @@ class MagasinTest {
 
 
         app.updateQuality();
-        appV2.updateQuality();
+        appV2.updateQualityComte();
 
         assertEquals(toString(app.items), toString(appV2.items));
 

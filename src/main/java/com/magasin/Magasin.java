@@ -48,7 +48,7 @@ class Magasin {
                                 items[i].quality = items[i].quality - 1;
                             }
                         }
-                    } else {
+                     } else {
                         items[i].quality = items[i].quality - items[i].quality;
                     }
                 } else {
