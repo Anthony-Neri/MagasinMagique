@@ -37,7 +37,7 @@ class MagasinTest {
 
 
         app.updateQuality();
-        appV2.updateQualityComte();
+        appV2.updateQuality();
 
         assertEquals(toString(app.items), toString(appV2.items));
 
@@ -65,7 +65,7 @@ class MagasinTest {
 
 
         app.updateQuality();
-        appV2.updateQualityPassVipConcert();
+        appV2.updateQuality();
 
         assertEquals(toString(app.items), toString(appV2.items));
 
@@ -115,7 +115,7 @@ class MagasinTest {
 
 
         app.updateQuality();
-        appV2.updateQualityBasic();
+        appV2.updateQuality();
 
         assertEquals(toString(app.items), toString(appV2.items));
 
