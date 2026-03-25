@@ -12,7 +12,7 @@ public class MagasinV2 {
         if (item.sellIn > 0) {
             item.quality -= 1;
         } else {
-            item.quality -= 5;
+            item.quality -= 2;
         }
         item.sellIn -= 1;
 
