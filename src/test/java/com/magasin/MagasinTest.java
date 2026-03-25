@@ -48,10 +48,22 @@ class MagasinTest {
             }
         }
 
+        @Test
+        void checkUpdateQualityKryptonite() {
+            Item[] items = new Item[] { new Item("Kryptonite", 15, 80) };
+            Item[] itemsV2 = new Item[] { new Item("Kryptonite", 15, 80) };
 
+            Magasin app = new Magasin(items);
+            MagasinV2 appV2 = new MagasinV2(itemsV2);
 
+            for(int i = 0; i < 50; i++) {
+                app.updateQuality();
+                appV2.updateQuality();
 
-
+                assertEquals(app.items[0].quality, appV2.items[0].quality);
+                assertEquals(app.items[0].sellIn, appV2.items[0].sellIn);
+            }
+        }
 }
 
 
