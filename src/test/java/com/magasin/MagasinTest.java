@@ -50,6 +50,8 @@ class MagasinTest {
                 new Item("Pass VIP Concert", 15, 40),
                 new Item("Pass VIP Concert", 5, 40),
                 new Item("Pass VIP Concert", 5, 49),
+                new Item("Pass VIP Concert", 6, 49),
+
                 new Item("Pass VIP Concert", 0, 50),
 
         };
@@ -57,6 +59,7 @@ class MagasinTest {
                 new Item("Pass VIP Concert", 15, 40),
                 new Item("Pass VIP Concert", 5, 40),
                 new Item("Pass VIP Concert", 5, 49),
+                new Item("Pass VIP Concert", 6, 49),
                 new Item("Pass VIP Concert", 0, 50),
         };
 
